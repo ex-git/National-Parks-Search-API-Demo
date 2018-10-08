@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>National Parks Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Search National Parks by State">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <main role="main">
+        <header role="banner">
+            <h1>National Park Search:</h1>
+        </header>
+        <section role="region">
+            <form class="search">
+                <legend>Search by State:</legend>
+                <label for="state">Input your states of interest, seperate multiple states by comma:</label>
+                <input type="text" placeholder="CA, UT" required id="state" name="state">
+                <label for="range">How many you want to see?</label>
+                <input type="number" value="10" required id="range" name="range">
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section role="presentation" aria-live="assertive" hidden class="result">
+            <div class="js-result">
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
